@@ -11,10 +11,10 @@ my.rec <- reconstruct(my.w, plot.waves = FALSE, lwd = c(1,2), legend.coords = "b
   
 library(biwavelet) 
 attach (my.rec[["series"]])
-A=lnco2i.rec
-B=lnco2i.r
-t1 = cbind(1:480, lnco2i) 
-t2 = cbind(1:480, lnco2i.r) 
+A=co2.rec
+B=co2.r
+t1 = cbind(1:480, co2) 
+t2 = cbind(1:480, co2.r) 
 wtc.AB = wtc(t1, t2, nrands = 20) 
 par(oma = c(0, 0, 0, 1), mar = c(5, 4, 4, 5) + 0.1) 
 plot(wtc.AB, plot.phase = FALSE, lty.coi = 1, col.coi = "grey", lwd.coi = 2, lwd.sig = 2, arrow.lwd = 0.03, arrow.len = 0.12, ylab = "Scale", xlab = "Period", plot.cb = TRUE, main = "Industrial CO2 Emissions", xaxt="n")
@@ -27,10 +27,10 @@ axis(side = 1, at = c(seq(1, n, 24)), labels = c(seq(2004, 2023, 1)))
 library(biwavelet)
 attach(All_Data_Ready_for_analysis)
 
-A=lnco2i  
-B=lnops_stock
-t1 = cbind(1:480, lnco2i)
-t2 = cbind(1:480, lnops_stock)
+A=co2  
+B=gdp
+t1 = cbind(1:480, co2)
+t2 = cbind(1:480, gdp)
 wtc.AB = wtc(t1, t2, nrands = 20)
 par(oma = c(0, 0, 0, 1), mar = c(5, 4, 4, 5) + 0.1)
 plot(wtc.AB, plot.phase = TRUE, lty.coi = 1, col.coi = "grey", lwd.coi = 2, 
