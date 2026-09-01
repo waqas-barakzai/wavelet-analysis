@@ -1,0 +1,228 @@
+# Wavelet Coherence and Reconstruction Analysis
+
+## Overview
+
+This repository contains R code for conducting **wavelet-based time-frequency analysis** of two economic or environmental time series.
+
+The project applies wavelet coherence and wavelet reconstruction techniques to investigate relationships between variables across different time scales and periods.
+
+The code is designed for academic research and can be adapted to different datasets and research applications.
+
+---
+
+## Author
+
+**Muhammad Waqas Khalid**
+
+PhD Researcher
+**University of Catania, Italy**
+
+---
+
+## Objectives
+
+The analysis has three main objectives:
+
+1. Examine the time-frequency relationship between two variables using **wavelet coherence**.
+2. Reconstruct a selected time series using **wavelet decomposition and reconstruction**.
+3. Compare the original and reconstructed series using wavelet coherence.
+
+---
+
+## Methods
+
+### 1. Wavelet Coherence
+
+Wavelet coherence is used to investigate the strength and dynamics of the relationship between two time series.
+
+Unlike conventional correlation analysis, wavelet coherence allows relationships to be examined simultaneously across:
+
+* Time
+* Frequency
+* Different time scales
+
+The analysis also uses phase information to identify the direction and timing relationship between the variables.
+
+---
+
+### 2. Wavelet Reconstruction
+
+Wavelet reconstruction is applied to one of the variables to identify its underlying time-frequency components.
+
+The reconstruction can help identify:
+
+* Long-term trends
+* Short-term fluctuations
+* Cyclical movements
+* Changes in the behavior of the series over time
+
+---
+
+### 3. Original vs Reconstructed Series
+
+The original and reconstructed series are subsequently compared using wavelet coherence.
+
+This provides a time-frequency assessment of how closely the reconstructed series represents the original data.
+
+---
+
+## Repository Structure
+
+The repository can be organized as follows:
+
+```text
+wavelet-analysis/
+│
+├── README.md
+├── LICENSE
+├── CITATION.cff
+│
+├── wavelet_analysis.R
+│
+├── data/
+│   └── README.md
+│
+├── figures/
+│   └── README.md
+│
+└── results/
+    └── README.md
+```
+
+---
+
+## Requirements
+
+The analysis requires **R** and the following R packages:
+
+```r
+install.packages("readxl")
+install.packages("biwavelet")
+install.packages("WaveletComp")
+install.packages("fields")
+```
+
+Load the packages using:
+
+```r
+library(readxl)
+library(biwavelet)
+library(WaveletComp)
+library(fields)
+```
+
+---
+
+## Data Requirements
+
+The code uses a dataset containing two variables:
+
+```text
+variable_a
+variable_b
+```
+
+These are **dummy variable names** used for demonstration and should be replaced with the actual variables used in the research.
+
+The current example assumes **480 observations** covering the period **2004–2023**.
+
+If a different number of observations or time period is used, the corresponding values in the R script should be modified.
+
+---
+
+## Main Variables
+
+| Variable         | Description                                  |
+| ---------------- | -------------------------------------------- |
+| `variable_a`     | Placeholder for the first research variable  |
+| `variable_b`     | Placeholder for the second research variable |
+| `log_variable_a` | Log-transformed version of Variable A        |
+| `log_variable_b` | Log-transformed version of Variable B        |
+
+The variable names in the repository are intentionally generic so that the code can be adapted to different research projects.
+
+---
+
+## Analysis Workflow
+
+```text
+Research Dataset
+       │
+       ▼
+Variable A + Variable B
+       │
+       ▼
+Wavelet Coherence Analysis
+       │
+       ▼
+Time-Frequency Relationship
+       │
+       ▼
+Wavelet Analysis of Variable A
+       │
+       ▼
+Wavelet Reconstruction
+       │
+       ▼
+Original vs Reconstructed Series
+       │
+       ▼
+Wavelet Coherence Analysis
+```
+
+---
+
+## Reproducibility
+
+To reproduce the analysis:
+
+1. Install R or RStudio.
+2. Clone or download this repository.
+3. Install the required R packages.
+4. Prepare the research dataset.
+5. Place the dataset in the appropriate `data/` directory.
+6. Update the variable names in `wavelet_analysis.R`.
+7. Update the number of observations if necessary.
+8. Run the R script.
+
+---
+
+## Important Note on Data
+
+The repository contains code for research purposes.
+
+Raw or confidential research data should **not** be uploaded to this repository unless permission has been obtained to redistribute the data.
+
+If the data cannot be publicly shared, users may reproduce the analysis using an appropriately licensed or publicly available dataset where possible.
+
+---
+
+## Citation
+
+If you use this code in your research, please cite the repository using the information provided in `CITATION.cff`.
+
+### Suggested citation
+
+**Khalid, Muhammad Waqas (2026). *Wavelet Coherence and Reconstruction Analysis*. University of Catania.**
+
+---
+
+## License
+
+This project is released under the **MIT License**.
+
+See the [`LICENSE`](LICENSE) file for the full license text.
+
+---
+
+## Disclaimer
+
+This repository is provided for academic and research purposes. The code may require modification depending on the structure, frequency, and characteristics of the dataset being analyzed.
+
+Users are responsible for validating the methodology, assumptions, and results for their own research applications.
+
+---
+
+## Acknowledgment
+
+This research code was developed as part of academic research at the **University of Catania, Italy**.
